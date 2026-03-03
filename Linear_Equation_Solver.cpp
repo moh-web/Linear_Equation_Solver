@@ -81,7 +81,6 @@ void parseEquation(string input, Equation& eq, int n) {
 int main() {
 
 	int n;
-	cout << "Enter number of equations (n x n system): ";
 	cin >> n;
 	cin.ignore();
 
@@ -90,13 +89,9 @@ int main() {
 	for (int i = 0; i < n; i++)
 		eq[i].a = new double[n];
 
-	cout << "\nEnter equations like:\n";
-	cout << "3x1 + 55 + x2 = 60\n\n";
-
 	for (int i = 0; i < n; i++) {
 
 		string input;
-		cout << "Equation " << i + 1 << ": ";
 		getline(cin, input);
 
 		try {
@@ -148,7 +143,6 @@ int main() {
 		x[i] /= eq[i].a[i];
 	}
 
-	cout << "\nSolution:\n";
 	for (int i = 0; i < n; i++)
 		cout << "x" << i + 1 << " = " << x[i] << endl;
 
